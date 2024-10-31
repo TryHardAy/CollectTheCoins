@@ -261,6 +261,7 @@ namespace Program
         static void Main(string[] args)
         {
             string path = "map1.txt";
+            ConsoleKey key;
 
             GameManager gameManager = new GameManager(path);
             gameManager.CreateCoin();
@@ -269,6 +270,10 @@ namespace Program
             while (true)
             {
                 Console.WriteLine(gameManager);
+                key = Console.ReadKey().Key;
+
+                if (key == ConsoleKey.Escape)
+                    break;
 
                 gameManager.MovePlayer(Console.ReadKey().Key);
 
