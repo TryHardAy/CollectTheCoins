@@ -275,7 +275,7 @@ namespace Program
                 if (key == ConsoleKey.Escape)
                     break;
 
-                gameManager.MovePlayer(Console.ReadKey().Key);
+                gameManager.MovePlayer(key);
 
                 Console.Clear();
             }
